@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pots. Customer Enquiry</title>
+</head>
+<body>
+
+  <h1>Pots</h1>
+  <p>123 Garden Lane, Sandton, Johannesburg, Gauteng, 2196</p>
+  <p>Tel: +27 11 123 4567</p>
+  <p>Email: hello@potsandco.co.za</p>
+
+  <h2>Business Hours</h2>
+  <table border="1" cellpadding="6" cellspacing="0">
+    <thead>
+      <tr>
+        <th>Day</th>
+        <th>Opening Time</th>
+        <th>Closing Time</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Monday</td>
+        <td>08:00</td>
+        <td>17:00</td>
+      </tr>
+      <tr>
+        <td>Tuesday</td>
+        <td>08:00</td>
+        <td>17:00</td>
+      </tr>
+      <tr>
+        <td>Wednesday</td>
+        <td>08:00</td>
+        <td>17:00</td>
+      </tr>
+      <tr>
+        <td>Thursday</td>
+        <td>08:00</td>
+        <td>17:00</td>
+      </tr>
+      <tr>
+        <td>Friday</td>
+        <td>08:00</td>
+        <td>17:00</td>
+      </tr>
+      <tr>
+        <td>Saturday</td>
+        <td>09:00</td>
+        <td>14:00</td>
+      </tr>
+      <tr>
+        <td>Sunday</td>
+        <td colspan="2">Closed</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <hr />
+
+  <h2>Customer Enquiry Form</h2>
+  <p>Fill in the form below and we will get back to you within 1 business day.</p>
+
+  
+
+    <label for="firstName">First Name:</label><br />
+    <input type="text" id="firstName" name="firstName" placeholder="Jane" required /><br /><br />
+
+    <label for="lastName">Last Name:</label><br />
+    <input type="text" id="lastName" name="lastName" placeholder="Smith" required /><br /><br />
+
+    <label for="email">Email Address:</label><br />
+    <input type="email" id="email" name="email" placeholder="jane@example.com" required /><br /><br />
+
+    <label for="phone">Phone Number (optional):</label><br />
+    <input type="tel" id="phone" name="phone" placeholder="+27 71 234 5678" /><br /><br />
+
+    <label for="product">Product Interest:</label><br />
+    <select id="product" name="product" required>
+      <option value="">-- Select a category --</option>
+      <option value="indoor">Indoor Plant Pots</option>
+      <option value="outdoor">Outdoor Garden Pots</option>
+      <option value="ceramic">Ceramic Pots</option>
+      <option value="terracotta">Terracotta Pots</option>
+      <option value="hanging">Hanging Pots</option>
+      <option value="decorative">Decorative Pots</option>
+      <option value="wholesale">Wholesale / Bulk Order</option>
+      <option value="custom">Custom / Bespoke Order</option>
+      <option value="other">Other</option>
+    </select><br /><br />
+
+    <label for="quantity">Approximate Quantity:</label><br />
+    <select id="quantity" name="quantity" required>
+      <option value="">-- Select --</option>
+      <option value="1-5">1 – 5 units</option>
+      <option value="6-20">6 – 20 units</option>
+      <option value="21-50">21 – 50 units</option>
+      <option value="50+">50+ units</option>
+    </select><br /><br />
+
+    <label for="budget">Budget Range (ZAR):</label><br />
+    <select id="budget" name="budget" required>
+      <option value="">-- Select --</option>
+      <option value="under500">Under R500</option>
+      <option value="500-2000">R500 – R2,000</option>
+      <option value="2000-10000">R2,000 – R10,000</option>
+      <option value="10000+">R10,000+</option>
+    </select><br /><br />
+
+    <label for="referral">How did you hear about us?</label><br />
+    <select id="referral" name="referral">
+      <option value="">-- Select --</option>
+      <option value="google">Google Search</option>
+      <option value="social">Social Media (Instagram / Facebook)</option>
+      <option value="word">Word of Mouth</option>
+      <option value="market">Market / Trade Show</option>
+      <option value="returning">Returning Customer</option>
+      <option value="other">Other</option>
+    </select><br /><br />
+
+    <label for="message">Your Message:</label><br />
+    <textarea
+      id="message"
+      name="message"
+      rows="6"
+      cols="50"
+      placeholder="Tell us more about what you are looking for — size, colour, style, any special requirements..."
+      required
+    ></textarea><br /><br />
+
+    <input type="submit" value="Submit Enquiry" />
+
+  </form>
+
+  <p id="successMessage" style="display:none;">
+    Thank you! Your enquiry has been submitted. We will be in touch within 1 business day.
+  </p>
+
+  <hr />
+  <p>
+    Alternatively, visit us at: <strong>123 Garden Lane, Sandton, Johannesburg</strong><br />
+    Or call us on: <strong>+27 11 123 4567</strong><br />
+    Or email: <strong>hello@potsandco.co.za</strong>
+  
+
+</body>
+</html>
+
+  
