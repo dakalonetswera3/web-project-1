@@ -10,19 +10,20 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
- var typed = new Typed('#kitchen-heading', {
+  /* ── 2. Typed.js heading animation ── */
+  var typed = new Typed('#kitchen-heading', {
     strings: ['The <span class="orange-text">Heart</span> Of Your Kitchen.'],
-    typeSpeed: 60,      
-    backSpeed: 40,      
-    backDelay: 2000,    
-    startDelay: 500,    
-    loop: true,         
-    showCursor: true,   
+    typeSpeed: 60,
+    backSpeed: 40,
+    backDelay: 2000,
+    startDelay: 500,
+    loop: true,
+    showCursor: true,
     cursorChar: '|',
-    contentType: 'html' 
-});
+    contentType: 'html'
+  });
 
-  /*  2. Scroll-reveal (IntersectionObserver)  */
+  /* ── 3. Scroll-reveal (IntersectionObserver) ── */
   const revealStyle = document.createElement('style');
   revealStyle.textContent = `
     .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.6s ease, transform 0.6s ease; }
@@ -46,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   revealTargets.forEach(el => observer.observe(el));
 
-  /* 3. Lightbox  */
+  /* ── 4. Lightbox ── */
   const lbStyle = document.createElement('style');
   lbStyle.textContent = `
     #lb-overlay {
@@ -104,7 +105,6 @@ document.addEventListener('DOMContentLoaded', () => {
   overlay.querySelector('#lb-close').addEventListener('click', closeLightbox);
   document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
 
-  // Attach lightbox to all product/content images
   document.querySelectorAll('.product-card img, .content-block img, .hero-img-wrap img, .promo-banner img').forEach(img => {
     img.classList.add('lb-trigger');
     img.addEventListener('click', e => {
@@ -113,7 +113,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  /*  4. Hero Carousel with 3-second auto-advance  */
+  /* ── 5. Hero Carousel with 3-second auto-advance ── */
   const carousel = document.getElementById('hero-carousel');
   if (carousel) {
     const slides = carousel.querySelectorAll('.carousel-slide');
@@ -140,7 +140,6 @@ document.addEventListener('DOMContentLoaded', () => {
       startAuto();
     }
 
-    // Arrow buttons
     if (prevBtn) {
       prevBtn.addEventListener('click', () => { goTo(current - 1); resetAuto(); });
     }
@@ -148,7 +147,6 @@ document.addEventListener('DOMContentLoaded', () => {
       nextBtn.addEventListener('click', () => { goTo(current + 1); resetAuto(); });
     }
 
-    // Dot buttons
     dots.forEach(dot => {
       dot.addEventListener('click', () => {
         goTo(parseInt(dot.dataset.index, 10));
@@ -156,12 +154,10 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
 
-    // Pause on hover, resume on mouse leave
     carousel.addEventListener('mouseenter', () => clearInterval(autoTimer));
     carousel.addEventListener('mouseleave', startAuto);
 
-    // Start auto-play
     startAuto();
   }
 
-  /* ── 5. Find Us — Leaflet Map ── */
+});
